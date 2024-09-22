@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Home Section -->
+  <section id="home">
+    <div class="logo">
+        <img src="logo.jpg" alt="Hamro Nepali Hotel Logo" class="logo-img">
+        <h1 class="logo-text">Welcome to Our Restaurant</h1><br><br><br>
+    
+  </section>
+  <!-- Navigation Bar -->
+  <nav>
+
+    <ul>
+      <li class="nav-item">
+        <a class="nav-link" a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="menu.html">menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="album.html">Album</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Reservation.html">Reservations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+      <!-- Login/Sign-In Buttons -->
+      <div class="auth-buttons">
+        <button id="loginBtn">Login</button>
+        <button id="signUpBtn">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Enter Email" required>
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- Sign-Up Modal -->
+  <div id="signUpModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signUpModal')">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signUpForm">
+        <input type="text" id="signUpName" placeholder="Enter Name" required>
+        <input type="email" id="signUpEmail" placeholder="Enter Email" required>
+        <input type="password" id="signUpPassword" placeholder="Enter Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+    <!-- Navigation Dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  </section>
+    <!-- Menu Section -->
+<section id="menu" class="section">
+  <h2>Menu</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Pizza</h3>
+      <p>Price:Rs 200</p>
+      <button onclick="placeOrder('Pizza', 10)">Order Now</button>
+    </div>
+    <div class="menu-item">
+      <h3>Burger</h3>
+      <p>Price:Rs 110</p>
+      <button onclick="placeOrder('Burger', 8)">Order Now</button>
+    </div>
+    <div class="menu-item">
+      <h3>Pasta</h3>
+      <p>Price:Rs 140</p>
+      <button onclick="placeOrder('Pasta', 12)">Order Now</button>
+    </div>
+  </div>
+</section>
+<!-- Orders Section -->
+<section id="orders" class="section">
+  <h2>Current Orders</h2>
+  <ul id="orderList"></ul>
+</section>
+    <br><br><br>
+      <!-- Confirmation Message -->
+      <div id="confirmationMessage" style="display: none; color: green;">
+        Thank you for reaching out! We will get back to you soon.
+      </div>
+    </section>
+    <br><br><br><br><br>
+    <div class="footer-brand has-before has-after">
+
+      <form action="" class="input-wrapper">
+        <div class="icon-wrapper">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+          <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
+        </div>
+
+        <button type="submit" class="btn btn-secondary">
+          <span class="text text-1">Subscribe</span>
+
+          <span class="text text-2" aria-hidden="true">Subscribe</span>
+        </button>
+      </form>
+    </div>
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>123 New Panvel, Maharastra,India</p>
+        <p>Phone: +91 8307908366</p>
+        <p>Email: info@restaurant.com</p><br>
+              <p class="contact-label">Lunch Time</p>
+
+              <p class="body-4">
+                Monday to Sunday <br>
+                11.00 am - 2.30pm
+              </p><br>
+
+              <p class="contact-label">Dinner Time</p>
+
+              <p class="body-4">
+                Monday to Sunday <br>
+                05.00 pm - 10.00pm
+              </p>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul class="social-media">
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+          <li><a href="#orders">Orders</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Copyright Information -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Restaurant Management System. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
